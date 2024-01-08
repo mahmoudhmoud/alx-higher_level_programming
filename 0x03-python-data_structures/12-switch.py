@@ -2,5 +2,5 @@
 
 b = 10
 a = 89
-a, b = b, a
-print("a={:d} - b={:d}".format(a, b))
+b, a = a, b
+print("b={:d} - a={:d}".format(b, a))
