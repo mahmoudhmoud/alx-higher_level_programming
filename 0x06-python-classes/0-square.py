@@ -4,4 +4,4 @@
 
 class Square:
     """kadiro tam"""
-	pass
+    pass
