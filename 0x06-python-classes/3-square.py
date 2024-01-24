@@ -16,4 +16,4 @@ class Square:
 
     def area(self):
         """fih nit"""
-        return self.__size
+        return self.__size ** 2
