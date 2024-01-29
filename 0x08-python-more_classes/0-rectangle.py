@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 
-"""
-Defining an empty class Rectangle
-"""
+"""afda; aafa tam"""
 
 
 class Rectangle:
-    """Empty representation of a Rectangle"""
+    """ FCHI T tamkl"""
     pass
