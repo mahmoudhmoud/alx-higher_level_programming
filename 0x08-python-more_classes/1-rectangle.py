@@ -1,23 +1,23 @@
 #!/usr/bin/python3
 
-"""iwa lkah """
+"""man hadak nit"""
 
 
 class Rectangle:
-    """man lkah """
+    """zawya fih"""
     def __init__(self, width=0, height=0):
-        """iwa lkah tam"""
-    self.height = height
+        """jahan"""
+        self.height = height
         self.width = width
 
     @property
     def width(self):
-        """ bhal li tam"""
+        """mano lhih"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """mantam"""
+        """dih lih"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
@@ -26,12 +26,12 @@ class Rectangle:
 
     @property
     def height(self):
-        """dih lih"""
+        """man ljar liandah"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """khodo mano"""
+        """mantam lih"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
