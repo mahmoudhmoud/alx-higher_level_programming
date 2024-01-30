@@ -1,26 +1,26 @@
 #!/usr/bin/python3
 
-"""nit zat"""
+'''nawp mano'''
 
 
 class Rectangle:
-    """thne nit"""
+    '''had daraja'''
 
     number_of_instances = 0
-    """tam fih"""
+    '''mano ltam'''
 
     print_symbol = '#'
-    """mah fih"""
+    '''naao'''
 
     def __init__(self, width=0, height=0):
-        """idan tam lih"""
+    '''marka dyalo'''
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
 
     @property
     def width(self):
-        """chof lih"""
+        '''khat tam'''
         return self.__width
 
     @width.setter
@@ -33,5 +33,39 @@ class Rectangle:
 
     @property
     def height(self):
-        """cho lih walo"""
+        '''daw h lih tam'''
         return self.__height
+
+    @height.setter
+    def height(self, value):
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
+        self.__height = value
+
+    def area(self):
+        '''malo lih'''
+        return self.width * self.height
+
+    def perimeter(self):
+        '''sado mno tam lih'''
+        if not self.width or not self.height:
+            return 0
+        return (self.width + self.height) * 2
+
+    def __str__(self):
+        '''nit iktih'''
+        if not self.width or not self.height:
+            return ""
+        return ((str(self.print_symbol) * self.width + "\n") *
+                self.height)[:-1]
+
+    def __repr__(self):
+        '''tal tam nit'''
+        return "Rectangle(" + str(self.width) + ", " + str(self.height) + ")"
+
+    def __del__(self):
+        '''tam nit lih'''
+        print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
