@@ -1,26 +1,36 @@
 #!/usr/bin/python3
 
-'''nawp mano'''
+'''nawao'''
 
 
 class Rectangle:
-    '''had daraja'''
+    '''This class defines a simple Rectangle.'''
 
     number_of_instances = 0
-    '''mano ltam'''
+    '''int: The number of active instances.'''
 
     print_symbol = '#'
-    '''naao'''
+    '''type: Print symbol, can be any type.'''
 
     def __init__(self, width=0, height=0):
-    '''marka dyalo'''
+        '''Constructor.
+
+        Args:
+            width: The width of rectangle.
+            height: The height of rectangle.
+        '''
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
 
     @property
     def width(self):
-        '''khat tam'''
+        '''Property for the width of the rectangle.
+
+        Raises:
+            TypeError: If width is not an integer.
+            ValueError: If width is less than 0.
+        '''
         return self.__width
 
     @width.setter
@@ -33,7 +43,12 @@ class Rectangle:
 
     @property
     def height(self):
-        '''daw h lih tam'''
+        '''Property for the height of the rectangle.
+
+        Raises:
+            TypeError: If height is not an integer.
+            ValueError: If height is less than 0.
+        '''
         return self.__height
 
     @height.setter
@@ -45,27 +60,27 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        '''malo lih'''
+        '''Returns area of this rectangle.'''
         return self.width * self.height
 
     def perimeter(self):
-        '''sado mno tam lih'''
+        '''Returns perimeter of this rectangle.'''
         if not self.width or not self.height:
             return 0
         return (self.width + self.height) * 2
 
     def __str__(self):
-        '''nit iktih'''
+        '''Returns string representation.'''
         if not self.width or not self.height:
             return ""
         return ((str(self.print_symbol) * self.width + "\n") *
                 self.height)[:-1]
 
     def __repr__(self):
-        '''tal tam nit'''
+        '''Returns formal string representation...'''
         return "Rectangle(" + str(self.width) + ", " + str(self.height) + ")"
 
     def __del__(self):
-        '''tam nit lih'''
+        '''Called at instance deletion.'''
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
