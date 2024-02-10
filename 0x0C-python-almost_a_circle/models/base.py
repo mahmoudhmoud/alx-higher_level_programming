@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
 """modaj dyalo"""
-
 from json import dumps, loads
 import csv
 
