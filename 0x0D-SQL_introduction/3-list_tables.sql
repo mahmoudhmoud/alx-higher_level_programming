@@ -1,0 +1,3 @@
+-- ratab dak
+
+SHOW TABLES;
