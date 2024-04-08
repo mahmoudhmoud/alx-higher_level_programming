@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-//kayalaj d length
+// kayalaj maw lent
 if (process.argv.length <= 3) {
   console.log('0');
 } else {
