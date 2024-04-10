@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-//tabit mon
+// tabit mon
 const SquareP = require('./5-square');
 
 class Square extends SquareP {
