@@ -1,11 +1,12 @@
 #!/usr/bin/python3
+
 ''' ifi ohkjf '''
 
 import MySQLdb
 from sys import argv
 
 if __name__ == '__main__':
-    """ oh bey rtjl """
+    ''' oh bey rtjl '''
     db = MySQLdb.connect(host="localhost", user=argv[1], port=3306,
                          passwd=argv[2], db=argv[3])
 
