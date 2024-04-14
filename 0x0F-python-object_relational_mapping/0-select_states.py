@@ -1,34 +1,17 @@
 #!/usr/bin/python3
+''' is ki aaxma '''
 
-''' namodaj kay kiwa '''
-
-import sys
 import MySQLdb
-
-def list_states (username, password, database):
-    """ratab kidar nlias"""
-
-    db = MySQLdb.connect(host='localhost',\
-            port=3306,\
-            user=username,\
-            passwd=password,\
-            db=database)
-    cursor = db.cursor()
-
-    cursor.execute('SELECT * FROM states ORDER BY id ASC')
-
-
-    rows = cursor.fetchall()
-
-    for row in rows:
-        print(row)
-
-    db.close()
+from sys import argv
 
 if __name__ == '__main__':
 
-    username = sys.argv[1]
-    password = sys.argv[2]
-    database = sys.argv[3]
+    db = MySQLdb.connect(host="localhost", user=argv[1], port=3306,
+                         passwd=argv[2], db=argv[3])
 
-    list_states(username, password, database)
+    cur = db.cursor()
+    cur.execute("SELECT * FROM states")
+    rows = cur.fetchall()
+
+    for row in rows:
+        print(row)
