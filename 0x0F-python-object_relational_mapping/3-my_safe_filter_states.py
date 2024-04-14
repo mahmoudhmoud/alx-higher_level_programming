@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 ''' yad ajal alij '''
 
 import MySQLdb
