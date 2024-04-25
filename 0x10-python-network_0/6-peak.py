@@ -1,20 +1,16 @@
 #!/usr/bin/python3
-''' logarithm dyal kaima '''
+""" logarithm dyal kaima """
 
 
 def find_peak(list_of_integers):
-    ''' lka lkayim dyalo man tam '''
- if not list_of_integers:
-        return None
-    length = len(list_of_integers)
-        if length == 1:
-        return list_of_integers[0]
-    elif length == 2:
-        return max(list_of_integers)
-    mid = length // 2
-        if list_of_integers[mid] < list_of_integers[mid - 1]:
-        return find_peak(list_of_integers[:mid])
-    elif mid + 1 < length and list_of_integers[mid] < list_of_integers[mid + 1]:
-        return find_peak(list_of_integers[mid:])
-    else:
-        return list_of_integers[mid]
+    """ lka lkayim dyalo man tam """
+     if list_of_integers:
+        lf = 0
+        r = len(list_of_integers) - 1
+        while lf < r:
+            m = (lf + r) // 2
+            if list_of_integers[m] > list_of_integers[m + 1]:
+                r = m
+            else:
+                lf = m + 1
+        return list_of_integers[lf]
