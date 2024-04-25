@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 ''' logarithm dyal kaima '''
 
+
 def find_peak(list_of_integers):
     ''' lka lkayim dyalo man tam '''
 size = len(list_of_integers)
