@@ -1,5 +1,4 @@
 #!/usr/bin/node
-// bach tadkh laonsor
 
 const request = require('request');
 const id = process.argv[2];
@@ -11,6 +10,7 @@ request.get(url, (error, response, body) => {
   } else {
     const content = JSON.parse(body);
     const characters = content.characters;
+    // mhafda litmaa
     for (const character of characters) {
       request.get(character, (error, response, body) => {
         if (error) {
