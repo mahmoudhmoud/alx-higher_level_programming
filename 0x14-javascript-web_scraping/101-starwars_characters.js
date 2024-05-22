@@ -26,6 +26,7 @@ request(url, (error, response, body) => {
   }
 
   const characters = JSON.parse(body).characters;
+  console.log('Characters:', characters);
 
   makeRequests(characters);
 });
